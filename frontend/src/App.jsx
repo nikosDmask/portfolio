@@ -1,6 +1,11 @@
+import './App.css'
 import Header from "./components/Header"
 import Hero from "./components/Hero"
-import './App.css'
+import Projects from "./components/Projects";
+import Tape from './components/Tape';
+import TestimonialsSection from './components/Testimonials';
+import About from "./components/About";
+
 
 function App() {
 
@@ -9,8 +14,10 @@ function App() {
     <div className="bg-gray-900 text-white antialiased font-inter">
       <Header />
       <Hero />
-      <br></br>
-      <br></br>
+      <Projects />
+      <Tape />
+      <TestimonialsSection />
+      <About />
     </div>
   );
 }
