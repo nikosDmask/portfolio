@@ -9,7 +9,7 @@ const HeroOrbit = ({
     rotation = 0
 }) => {
     return ( 
-    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -z-20 animate-spin [animation-duration:40s]">
         <div 
         className={`flex items-start justify-start ${size}`}
         style={{transform: `rotate(${rotation}deg)`}}

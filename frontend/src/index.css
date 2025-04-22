@@ -4,6 +4,31 @@
 @theme {
     --font-inter: "Inter", sans-serif;
     --font-calistoga: "Calistoga", sans-serif;
+    --animate-ping-large: ping-large 1s ease-in-out infinite;
+    --animate-move-left: move-left 1s linear infinite;
+    --animate-move-right: move-right 1s linear infinite;
+    @keyframes ping-large {
+        75%, 100% {
+          transform: scale(3);
+          opacity: 0;
+        }
+      }
+    @keyframes move-left {
+        0% {
+            transform: translateX(0%);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+    @keyframes move-right {
+        0% {
+            transform: translateX(-50%);
+        }
+        100% {
+            transform: translateX(0%);
+        }
+    }
 }
 
 @layer base {
@@ -23,10 +48,7 @@
 }
 
 
-@container {
-    center: true,
-    padding: {
-        DEFAULT: "1rem",
-        md: "2rem",
-    }
+.container {
+    @apply mx-auto px-4 md:px-8;
 }
+
