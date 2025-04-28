@@ -88,7 +88,7 @@ const Hero = () => {
             starClass="size-2 bg-emerald-300/20 rounded-full"
         /> 
         </div>
-        <div className='container'>
+        <div className='container relative z-index-10'>
             <div className='flex flex-col items-center'>
                 <img src={memojiImage} className='size-[100px]' alt="Person peeking from behind laptop" />   
                 <div className='bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg'>
@@ -110,7 +110,7 @@ const Hero = () => {
                     to='projects'
                     smooth={true}
                     duration={500}
-                    className='inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl'>
+                    className='cursor-pointer inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl'>
                     <span className='font-semibold'>Explore My Work</span>
                     <img src={ArrowDown} className='size-4'/>
                 </Link>
@@ -118,7 +118,7 @@ const Hero = () => {
                     to='contact'
                     smooth={true}
                     duration={500}
-                    className='inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl'>
+                    className='cursor-pointer inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl'>
                     <span>👋</span>
                     <span className='font-semibold'>Let's Connect</span>
                 </Link>
