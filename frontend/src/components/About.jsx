@@ -89,6 +89,7 @@ const hobbies = [
 const About = () => {
   const constrainRef = useRef(null);
   return (
+  <section id='about'>
   <div className='py-20 lg:py-28'>
     <div className='container px-6 lg:px-24 md:px-12'>
         <SectionHeader 
@@ -165,6 +166,7 @@ const About = () => {
         </div>
     </div>
     </div>
+    </section>
   )
 }
 

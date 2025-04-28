@@ -48,7 +48,7 @@ const portfolioProjects = [
 
 const Projects = () => {
   return (
-    <section className="pb-16 lg:py-24">
+    <section id='projects' className="pb-16 lg:py-24">
       <div className="container px-6 lg:px-24 md:px-12">
         <SectionHeader
           eyebrow="Real-world Results"

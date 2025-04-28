@@ -5,10 +5,12 @@ import grainImage from "../assets/images/grain.jpg"
 import HeroOrbit from './HeroOrbit'
 import StarIcon from './StarIcon';
 import SparkleIcon from './SparkleIcon';
+import { Link } from 'react-scroll';    
 
 
 const Hero = () => {
   return (
+    <section id='home'>
     <div className='py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip'>
     <div className='absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]'>
         <div 
@@ -104,17 +106,26 @@ const Hero = () => {
                     </p>
                 </div>
             <div className='flex flex-col md:flex-row justify-center items-center mt-8 gap-4'>
-                <button className='inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl'>
+                <Link 
+                    to='projects'
+                    smooth={true}
+                    duration={500}
+                    className='inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl'>
                     <span className='font-semibold'>Explore My Work</span>
                     <img src={ArrowDown} className='size-4'/>
-                </button>
-                <button className='inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl'>
+                </Link>
+                <Link
+                    to='contact'
+                    smooth={true}
+                    duration={500}
+                    className='inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl'>
                     <span>👋</span>
                     <span className='font-semibold'>Let's Connect</span>
-                </button>
+                </Link>
             </div>
         </div>
     </div>
+    </section>
   )
 };
 
