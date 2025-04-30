@@ -9,8 +9,6 @@ const Contact = () => {
   <section id="contact" className="pt-20">
   <div className="py-16 pt-12 lg:py-24 lg:pt-20">
     <div className="container">
-
-      {/* AnimatePresence around whole box */}
       <AnimatePresence mode="wait">
         <motion.div
           key={openForm ? 'form-open' : 'form-closed'}
@@ -21,7 +19,7 @@ const Contact = () => {
           transition={{ duration: 0.5 }}
           className="rounded-3xl p-[2px] bg-gradient-to-r from-emerald-300 to-sky-400"
         >
-          {/* Inner gray content */}
+
           <motion.div
             layout
             initial={false}
@@ -35,7 +33,6 @@ const Contact = () => {
             className="rounded-3xl p-8 md:p-10 text-center md:text-left bg-gray-900"
           >
 
-            {/* Flex container */}
             <div className={`flex ${openForm ? 'flex-col' : 'flex-col md:flex-row'} gap-8 md:gap-16 items-center`}>
               <div className="flex-1">
                 <h2 className="font-serif text-2xl md:text-3xl font-semibold text-white">
@@ -46,7 +43,6 @@ const Contact = () => {
                 </p>
               </div>
 
-              {/* Animate "Contact Me" Button */}
               <AnimatePresence>
                 {!openForm && (
                   <motion.div
@@ -68,7 +64,6 @@ const Contact = () => {
 
             </div>
 
-            {/* Contact form appears */}
             <AnimatePresence>
               {openForm && (
                 <motion.form
