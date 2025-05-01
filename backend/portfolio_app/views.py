@@ -33,33 +33,50 @@ class EducationViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticatedOrReadOnly]
 
 def contact_view(request):
-    print("⚙️ contact_view hit, EMAIL_BACKEND=", settings.EMAIL_BACKEND)
     if request.method != 'POST':
         return JsonResponse({'error': 'Only POST allowed'}, status=405)
 
     try:
         data = json.loads(request.body)
-        name = data.get('name', '').strip()
-        email = data.get('email', '').strip()
-        subject = data.get('subject', '').strip()
+        name    = data.get('name', '').strip()
+        email   = data.get('email', '').strip()
+        subject = data.get('subject', '').strip() or 'Portfolio contact form'
         message = data.get('message', '').strip()
 
+        # 1) Build & send you the incoming message
         full_message = (
             f"New contact form submission:\n\n"
             f"Name: {name}\n"
             f"Email: {email}\n\n"
             f"Message:\n{message}"
         )
-        print(full_message)
         send_mail(
-            subject or 'Portfolio contact form',
+            subject,
             full_message,
-            settings.EMAIL_HOST_USER,
-            [settings.EMAIL_HOST_USER],
+            settings.EMAIL_HOST_USER,      # from
+            [settings.EMAIL_HOST_USER],    # to you
+            fail_silently=False,
+        )
+
+        # 2) Send the confirmation back to the user
+        confirmation_subject = "Thanks for reaching out!"
+        confirmation_message = (
+            f"Hi {name or 'there'},\n\n"
+            "Thanks for your message! 😊\n\n"
+            "I’ve received your inquiry and will get back to you as soon as possible.\n\n"
+            "Best regards,\n"
+            "Nikos"
+        )
+        send_mail(
+            confirmation_subject,
+            confirmation_message,
+            settings.EMAIL_HOST_USER,  # from your address
+            [email],                   # to the user’s address
             fail_silently=False,
         )
 
         return JsonResponse({'success': True})
+
     except Exception as e:
         return JsonResponse({'error': str(e)}, status=500)
     
