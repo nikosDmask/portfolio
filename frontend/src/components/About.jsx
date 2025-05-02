@@ -7,16 +7,27 @@ import JavascriptIcon from "./svgcomponents/JavascriptIcon"
 import HTMLIcon from "./svgcomponents/HTMLIcon"
 import CssIcon from "./svgcomponents/CssIcon"
 import ReactIcon from "./svgcomponents/ReactIcon"
-import ChromeIcon from './svgcomponents/ChromeIcon'
 import GithubIcon from "./svgcomponents/GithubIcon"
-import mapImage from "../assets/images/map.png"
+import athens_map from "../assets/images/athens_map.png"
+import DockerIcon from "./svgcomponents/DockerIcon"
+import AwsIcon from "./svgcomponents/AwsIcon"
 import smileMemoji from "../assets/images/memoji-smile.png"
+import PythonIcon from "./svgcomponents/PythonIcon"
+import DjangoIcon from "./svgcomponents/DjangoIcon" 
 import CardHeader from './CardHeader'
 import ToolboxItems from './ToolboxItems'
 import { motion }  from 'framer-motion'
 import { useRef } from 'react'
 
 const toolboxItems = [
+    {
+        title: 'Docker',
+        iconType: DockerIcon,
+    },
+    {
+        title: 'Aws',
+        iconType: AwsIcon,
+    },
     {
         title: 'JavaScript',
         iconType: JavascriptIcon,
@@ -34,24 +45,30 @@ const toolboxItems = [
         iconType: ReactIcon,
     },
     {
-        title: 'Chrome',
-        iconType: ChromeIcon,
-    },
-    {
         title: 'Github',
         iconType: GithubIcon,
-    }
+    },
+    {
+        title: 'Python',
+        iconType: PythonIcon,
+    },
+    {
+        title: 'Django',
+        iconType: DjangoIcon,
+    },
+    
+
 ]
 const hobbies = [
     {
-        title: 'Painting',
-        emoji: '🎨',
+        title: 'Downhill',
+        emoji: '🚴',
         left : '5%',
         top: '5%',
     },
     {
-        title: 'Photography',
-        emoji: '📸',
+        title: 'Swimming',
+        emoji: '🏊',
         left : '50%',
         top: '5%',
     },
@@ -147,7 +164,7 @@ const About = () => {
                     </div>
                 </Card>
                 <Card className="h-[320px] p-0 relative md:col-span-2 lg:col-span-1">
-                    <img src={mapImage} alt="map" className='h-full w-full object-cover object-left-top'/>
+                    <img src={athens_map} alt="map" className='opacity-85 h-full w-full object-cover object-left-top'/>
                     <div className="
                         absolute top-1/2 left-1/2
                         -translate-x-1/2 -translate-y-1/2

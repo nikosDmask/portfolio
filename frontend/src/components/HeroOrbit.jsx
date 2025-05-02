@@ -1,9 +1,8 @@
 import React from 'react'
 import StarIcon from './StarIcon';
-import SparkleIcon from './SparkleIcon';
 
 const HeroOrbit = ({
-    icon: IconComponent = StarIcon,
+    icon: IconComponent =  StarIcon,
     starClass = "size-28 text-emerald-300",
     size = "800px",
     rotation = 0

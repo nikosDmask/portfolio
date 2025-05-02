@@ -18,7 +18,7 @@ function App() {
       <Hero />
       <Projects />
       <Tape />
-      <TestimonialsSection />
+      
       <About />
       <Contact />
       <Footer />

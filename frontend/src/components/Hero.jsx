@@ -99,10 +99,9 @@ const Hero = () => {
                 </div>
             </div>
                 <div className='max-w-lg mx-auto'>
-                    <h1 className='font-serif text-3xl text-center mt-8 tracking-wide md:text-5xl'>Building Exceptional User Experiences</h1>
+                    <h1 className='font-serif text-3xl text-center mt-8 tracking-wide md:text-5xl'>Eager to Learn. Ready to Ship.</h1>
                     <p className='mt-4 text-center text-white/60 md:text-lg'>
-                        I specialize in transforming designs into functional, high-performing
-                        web applications. Let's discuss your next project.
+                    As a junior software engineer, I turn ideas into working apps while growing my skills every day. Let’s collaborate and build something great together.
                     </p>
                 </div>
             <div className='flex flex-col md:flex-row justify-center items-center mt-8 gap-4'>

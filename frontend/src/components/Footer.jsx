@@ -3,10 +3,10 @@ import { motion } from 'framer-motion'
 import ArrowUpRightIcon from './ArrowUpRightIcon'
 
 const links = [
-  { title: 'LinkedIn', href: 'https://www.linkedin.com/in/your-profile' },
+  { title: 'LinkedIn', href: 'https://www.linkedin.com/in/nikos-maskalidis-03a6b0330/' },
   { title: 'Facebook', href: 'https://www.facebook.com/your-profile' },
-  { title: 'GitHub', href: 'https://github.com/your-profile' },
-  { title: 'Twitter', href: 'https://twitter.com/your-profile' },
+  { title: 'GitHub', href: 'https://github.com/nikosDmask' },
+  { title: 'X-twitter', href: 'https://x.com/nikosDmask' },
 ]
 
 const containerVariants = {
@@ -41,6 +41,7 @@ const Footer = () => {
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
           >
+            
             {links.map(link => (
               <motion.a
                 key={link.title}
@@ -52,6 +53,12 @@ const Footer = () => {
                 <ArrowUpRightIcon className="size-4 text-white" />
               </motion.a>
             ))}
+            <motion.a
+              href='https://github.com/nikosDmask'
+              className='flex flex-row min-w-24 items-center justify-center bg-gradient-to-r from-emerald-300 to-sky-400 px-4 py-2 rounded-full text-sm font-semibold text-white'
+            >
+            Cv
+            </motion.a>
           </motion.nav>
         </div>
       </div>
