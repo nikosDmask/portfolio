@@ -10,7 +10,7 @@ from django.core.mail import send_mail
 from django.conf import settings
 from django.http import HttpResponse
 from django.views.decorators.csrf import ensure_csrf_cookie
-
+from rest_framework.parsers import MultiPartParser, FormParser
 
 
 class UserViewSet(viewsets.ModelViewSet):
