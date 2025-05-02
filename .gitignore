@@ -7,6 +7,20 @@ backend/env/
 backend/*.pyc
 backend/__pycache__/
 
-# OS files
+# === OS / Editor ===
 .DS_Store
 Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# === Docker ===
+docker-compose.override.yml
+*.env            
+docker-volumes/
+
+# === Logs & Misc ===
+*.log
+*.pid
+
+# (You can also add any Terraform / CloudFormation state files here later)

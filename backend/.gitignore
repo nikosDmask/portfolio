@@ -1,1 +1,23 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Django local DB & media
+db.sqlite3
+media/
+
+# Migrations (only ignore compiled files; keep the .py files!)
+portfolio_app/migrations/*.py[cod]
+!portfolio_app/migrations/__init__.py
+
+# local settings & secrets
 .env
+backend/*.env
+
+# logs
+*.log
