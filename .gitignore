@@ -23,4 +23,8 @@ docker-volumes/
 *.log
 *.pid
 
+# Django
+/backend/.env
+/backend/db.sqlite3
+
 # (You can also add any Terraform / CloudFormation state files here later)

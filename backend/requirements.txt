@@ -1,0 +1,8 @@
+Django>=5.1
+gunicorn
+python-decouple
+dj-database-url
+whitenoise
+djangorestframework
+psycopg2-binary
+django-cors-headers
