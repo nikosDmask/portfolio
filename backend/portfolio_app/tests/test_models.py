@@ -1,5 +1,5 @@
 import pytest
-from .models import Projects
+from portfolio_app.models import Projects
 
 @pytest.mark.django_db
 def test_can_create_project():

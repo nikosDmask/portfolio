@@ -145,6 +145,13 @@ CSRF_TRUSTED_ORIGINS = [
     "http://localhost:5173",  
 ]
 
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": [],
+    "TEST_REQUEST_RENDERER_CLASSES": (
+        "rest_framework.renderers.JSONRenderer",
+    ),
+}
+
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST        = 'smtp.gmail.com'
 EMAIL_PORT        = 587
