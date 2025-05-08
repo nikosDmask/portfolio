@@ -15,7 +15,7 @@ class Projects(models.Model):
         max_length=500,
         help_text="URL to the live project or demo"
     )
-    description = models.TextField()
+    description = models.TextField(null=True, default=None, blank=True)
     image     = models.URLField(max_length=500, help_text="URL of the project image")
     created   = models.DateTimeField(auto_now_add=True)
     updated   = models.DateTimeField(auto_now=True)
