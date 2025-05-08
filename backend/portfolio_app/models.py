@@ -7,7 +7,6 @@ class Projects(models.Model):
     company   = models.CharField(max_length=200)
     year      = models.CharField(max_length=4)
     title     = models.CharField(max_length=200)
-    # store an array of { "title": "..." } objects
     results   = models.JSONField(
         default=list,
         help_text="List of result objects, e.g. [{ 'title': '…' }, …]"
@@ -16,8 +15,7 @@ class Projects(models.Model):
         max_length=500,
         help_text="URL to the live project or demo"
     )
-    # if you have a hosted URL for the screenshot, use URLField;
-    # swap to ImageField(upload_to='projects/') if you want file uploads
+    description = models.TextField()
     image     = models.URLField(max_length=500, help_text="URL of the project image")
     created   = models.DateTimeField(auto_now_add=True)
     updated   = models.DateTimeField(auto_now=True)
