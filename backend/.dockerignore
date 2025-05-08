@@ -1,0 +1,20 @@
+# backend/.dockerignore
+
+# Python virtual env
+venv
+env
+.venv
+
+# Bytecode
+__pycache__
+*.py[cod]
+
+# Django stuff
+*.sqlite3
+media
+staticfiles
+
+# Local settings / secrets
+.env
+*.pem
+*.key
